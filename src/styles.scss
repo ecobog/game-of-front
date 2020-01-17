@@ -1,0 +1,15 @@
+
+@import	'./styles/blocks/background.blocks';
+
+@import '';
+
+.App {
+    text-align: center;
+  }
+
+#language {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    list-style: none;
+  }
