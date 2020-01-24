@@ -16,10 +16,10 @@ function App() {
       <div className="App">
         <Header/>
           <Switch>
-            <Route path="/characters" component={Characters}/>
-            <Route path="/houses" component={Houses}/>
-            <Route path="/timeline" component={Timeline}/>
-            <Route path="/" component={Home} />
+            <Route exact path="/characters" component={Characters}/>
+            <Route exact path="/houses" component={Houses}/>
+            <Route exact path="/timeline" component={Timeline}/>
+            <Route exact path="/" component={Home} />
           </Switch>
         <Footer/>
         </div>

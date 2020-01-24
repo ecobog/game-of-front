@@ -5,22 +5,22 @@ class Footer extends Component {
 
     render(){
         return(
-            <div>
-                <nav>
-                    <ul className="nav-links">
+                <nav className="b-footer">
+                    <div class="container">
+                    <ul className="b-footer__list">
                         <Link to= './characters'>
-                            <li>PERSONAJES</li>
+                            <li className="personajes" className="header__nav">PERSONAJES</li>  
                         </Link>
                         <Link to='./houses'>
-                            <li>CASAS</li>
+                            <li className="casas" className="header__nav">CASAS</li>
                         </Link>
                         <Link to= './timeline'>
-                            <li>CRONOLOGIA</li>
+                            <li className="cronologia" className="header__nav">CRONOLOGIA</li>
                         </Link>
 
                     </ul>
+                    </div>
                 </nav>
-            </div>  
                  
         );
     }

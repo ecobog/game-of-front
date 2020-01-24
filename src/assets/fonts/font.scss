@@ -1,0 +1,22 @@
+@font-face{
+    font-family: GOT;
+    src: url('./GameOfThrones.ttf');
+}
+
+.font-got{
+    font-family: GOT;
+    color: white;
+    position: absolute;
+    width: 575px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+    color: white;
+    font-size: 6rem;
+}
+

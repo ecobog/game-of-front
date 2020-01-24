@@ -1,15 +1,57 @@
 
 @import	'./styles/blocks/background.blocks';
+@import './assets/fonts/font.scss';
 
-@import '';
+.b-header{
+  position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__languages{
+      justify-content: space-around;
+      align-items: flex-end;
+      list-style: none;
+      display: inline-flex;
+      padding-left:1000px;    
+      padding-right:3px;
+      position: relative;
+    }
 
-.App {
-    text-align: center;
+}
+
+.b-footer{
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    &__list{
+      list-style: none;
+      padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+    height: 50px;
+
+    }
+}
+
+
+  .personajes{
+    padding-left: 150px;
+    padding-right: 150px;
   }
 
-#language {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    list-style: none;
+  .casas{
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .cronologia{
+    padding-left: 150px;
+    padding-right: 150px;
   }

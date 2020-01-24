@@ -6,8 +6,8 @@ class Header extends Component {
 
     render(){
         return(
-            <nav>
-               <ul className="language">
+            <nav className="b-header">
+               <ul className="b-header__languages">
                    <li><img src={spain}/></li>
                    <li><img src={uk}/></li>
                </ul>
