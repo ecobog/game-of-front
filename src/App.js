@@ -13,13 +13,13 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (  
     <Router>
-      <div className="App">
+      <div>
         <Header/>
           <Switch>
-            <Route exact path="/characters" component={Characters}/>
-            <Route exact path="/houses" component={Houses}/>
-            <Route exact path="/timeline" component={Timeline}/>
-            <Route exact path="/" component={Home} />
+            <Route path="/characters" exact component={Characters}/>
+            <Route path="/houses" exact component={Houses}/>
+            <Route path="/timeline" exact component={Timeline}/>
+            <Route path="/" exact component={Home} />
           </Switch>
         <Footer/>
         </div>

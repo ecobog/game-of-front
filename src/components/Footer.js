@@ -6,7 +6,7 @@ class Footer extends Component {
     render(){
         return(
                 <nav className="b-footer">
-                    <div class="container">
+                    <div className="container">
                     <ul className="b-footer__list">
                         <Link to= './characters'>
                             <li className="personajes" className="header__nav">PERSONAJES</li>  
