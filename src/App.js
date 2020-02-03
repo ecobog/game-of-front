@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Home from './pages/home/Home';
 import Characters from './pages/characters/Characters';
+import ItemDetail from './pages/characters/ItemDetail';
 import Houses from './pages/houses/Houses';
 import Timeline from './pages/timeline/Timeline'
 import Footer from './components/Footer';
@@ -20,6 +21,7 @@ function App() {
             <Route path="/houses" exact component={Houses}/>
             <Route path="/timeline" exact component={Timeline}/>
             <Route path="/" exact component={Home} />
+            <Route path="/characters/:id" component={ItemDetail} />
           </Switch>
         <Footer/>
         </div>

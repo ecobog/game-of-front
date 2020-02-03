@@ -1,22 +1,28 @@
-import React, {Component} from 'react';
+import React from 'react';
 import spain from '../assets/images/spain1.svg';
 import uk from '../assets/images/uk1.svg';
+import { useTranslation } from 'react-i18next';
 
-class Header extends Component {
+function Header() {
+    
+    const {i18n} = useTranslation();
 
-    render(){
+    function handleClick(lang) {
+        i18n.changeLanguage(lang);
+        console.log(lang)
+    }    
+
         return(
             <nav className="b-header">
                <ul className="b-header__languages">
-                   <li><img src={spain}/></li>
-                   <li><img src={uk}/></li>
+                   <li onClick={() => handleClick('es')}><img src={spain} alt="spain"/></li>
+                   <li onClick={() => handleClick('en')}><img src={uk} alt="uk"/></li>
                </ul>
             {/*<button type="image" src={spain}></button>
                <button type="image" src={uk}></button> */}
             </nav>
                  
         );
-    }
 }
 
 export default Header;

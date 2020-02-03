@@ -3,12 +3,11 @@
     src: url('./GameOfThrones.ttf');
 }
 
-.header__nav{
+.b-footer__list{
     font-family: GOT;
-    color: white;
     position: absolute;
-    width: 200px;
-    top: 50%;
+    width: 90%;
+    bottom: 0;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -16,6 +15,12 @@
     transform: translate(-50%, -50%);
     z-index: 5;
     text-align: center;
+    font-size: 1rem;
     color: white;
-    font-size: 6rem;
+}
+
+.pointer {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
 }

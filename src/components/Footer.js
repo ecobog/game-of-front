@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import '../assets/fonts/font-nav.scss';
 
 class Footer extends Component {
 
@@ -8,14 +9,14 @@ class Footer extends Component {
                 <nav className="b-footer">
                     <div className="container">
                     <ul className="b-footer__list">
-                        <Link to= './characters'>
-                            <li className="personajes" className="header__nav">PERSONAJES</li>  
+                        <Link to= '/characters'>
+                            <li className="pointer">PERSONAJES</li>  
                         </Link>
-                        <Link to='./houses'>
-                            <li className="casas" className="header__nav">CASAS</li>
+                        <Link to='/houses'>
+                            <li className="pointer">CASAS</li>
                         </Link>
-                        <Link to= './timeline'>
-                            <li className="cronologia" className="header__nav">CRONOLOGIA</li>
+                        <Link to='/timeline'>
+                            <li className="pointer">CRONOLOGIA</li>
                         </Link>
 
                     </ul>
