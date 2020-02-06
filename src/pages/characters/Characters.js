@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import '../characters/Characters.scss';
 import cat from '../../assets/images/cat.jpg';
+import '../../assets/fonts/Lato.scss';
+import '../../assets/fonts/font-characters.scss';
 
 
 function Characters() {
@@ -39,6 +41,7 @@ function Characters() {
             </div>
         </div>
     ); */
+
     return (
         <div className="container-custom">
             <div className="container2">
@@ -47,9 +50,8 @@ function Characters() {
                     <Link to={`/characters/${item.name}`}>
                         <div className="image-container">
                             <img src={item.image ? item.image : cat} key={item.image} alt="character" width={120} height={200}></img>
-                            <p key={item.id} className="name">{item.name}</p>
+                            <p className="font-characters" font-characters key={item.id} className="name">{item.name}</p>
                         </div>
-                        
                     </Link>
             ))}
             </div>

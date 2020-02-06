@@ -1,0 +1,11 @@
+@font-face{
+    font-family: GOT;
+    src: url('./GameOfThrones.ttf');
+}
+
+.font-characters{
+    font-family: GOT;
+    color: white;
+    z-index: 5;
+    font-size: 1rem;
+}

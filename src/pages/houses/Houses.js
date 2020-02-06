@@ -3,7 +3,6 @@ import '../../styles/blocks/_background.blocks.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
-
 function Characters() {
 
     useEffect(() => {
@@ -24,13 +23,15 @@ function Characters() {
         <div className="container">
             <div className="row">
                 {items.map(item => (
-                    
-                    <div className="col-2">
-                        <Link to={`/houses/${item.name}`}>
-                            <img src={item.logoURL ? item.logoURL : null} key={item.logoURL} alt="house" width={180} height={220}></img>
-                            <h4 key={item.id}>{item.name}</h4>
-                        </Link>
-                    </div>
+                    item.logoURL
+                        ?
+                        <div className="col-2">
+                            <Link to={`/houses/${item.name}`}>
+                                <img src={item.logoURL} key={item.logoURL} alt="house" width={180} height={220}></img>
+                                <h4 key={item.id}>{item.name}</h4>
+                            </Link>
+                        </div>
+                        : null
                 ))}
             </div>
         </div>

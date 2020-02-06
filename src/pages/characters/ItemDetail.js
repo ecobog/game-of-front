@@ -1,61 +1,73 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/blocks/_background.blocks.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Characters from './Characters';
+import '../../assets/fonts/Lato.scss';
+import '../../assets/fonts/font-characters.scss';
 
-
-function ItemDetail ({match}){
+function ItemDetail({ match }) {
     const petition = match.params.id;
 
     const fetchItem = async () => {
         const fetchItem = await fetch(`https://api.got.show/api/show/characters/${petition}`)
         const item = await fetchItem.json();
+
         setItem(item);
-    } 
-    
+    }
+
     useEffect(() => {
         fetchItem();
-    },[fetchItem, match]);
+    }, [fetchItem, match]);
 
     const [item, setItem] = useState({});
     console.log(item);
 
-return (
-    <div>
-        <img src={item.image} alt=" " key={item.image}></img>
-        <h4>{item.name}</h4> 
-        
-        <h4>CASA</h4>
-            <img src={item.logoURL} key={item.logoURL} alt="house" width={180} height={220}></img>
 
-        <h4>ALIANZAS</h4>
-            <p>{item.allegiances}</p>
+    return (
+        <div className="b-container__all">
+            <div className="container-fluid">
+                <div className="itemDetail" className="row">
+                    <div>
+                        <img src={item.image} alt=" " key={item.image}></img>
+                        <h4 className="font-characters">{item.name}</h4>
+                    </div>
+                </div>
+<div className="container" className="prueba">
+                <div className="row">
+                    <div col="col-2">
+                        <h4 className="font-characters">ALIANZAS</h4>
+                        <p className="lato">{item.allegiances}</p>
+                    </div>
 
-        <h4>APARICIONES</h4>
-            <p>{item.appearances}</p>
+                    <div col="col-2">
+                        <h4 className="font-characters">APARICIONES</h4>
+                        <p className="lato">{item.appearances}</p>
+                    </div>
 
-        <h4>PADRE</h4>
-        <p>
-            {item.father}
-        </p>
+                    <div col="col-2">
+                        <h4 className="font-characters">PADRE</h4>
+                        <p className="lato">
+                            {item.father}
+                        </p>
+                    </div>
 
-        <h4>PADRE</h4>
-        <p>
-            {item.father}
-        </p>
+                    <div col="col-2">
+                        <h4 className="font-characters">DESCENDIENTES</h4>
+                        <p className="lato">
+                            {item.siblings}
+                        </p>
+                    </div>
 
-        <h4>DESCENDIENTES</h4>
-        <p>
-            {item.siblings}
-        </p>
-
-        <h4>TITULOS</h4>
-        <p>
-            {item.titles}
-        </p>
-
-    </div> 
-        );
-    }
+                    <div col="col-2">
+                        <h4 className="font-characters">TITULOS</h4>
+                        <p className="lato">
+                            {item.titles}
+                        </p>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    );
+}
 
 export default ItemDetail;

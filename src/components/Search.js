@@ -1,12 +1,10 @@
-import React, from 'react';
+import React from 'react';
 import '../../styles/blocks/_background.blocks.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 function Searcher (){
-
-
 
     return( 
         <div>
